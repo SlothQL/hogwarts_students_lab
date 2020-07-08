@@ -6,11 +6,10 @@
     <input id="second-name" type="text" name="second_name"/>
 
     <label for="house-select">House</label>
-    <select id="house-select" name="house">
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="Slytherin">Slytherin</option>
+    <select id="house-select" name="house_id">
+        <%@houses.each do |house| %>
+        <option value=<%=house.id%>><%=house.name%></option>
+        <% end %>
     </select>
 
     <label for="age">Age:</label>

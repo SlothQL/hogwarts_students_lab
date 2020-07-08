@@ -3,8 +3,7 @@ require_relative('./student')
 
 class House 
 
-    attr_reader :id
-    attr_accessor :name
+    attr_accessor :name, :id
 
     def initialize(options)
         @id = options['id'].to_i if options['id']
